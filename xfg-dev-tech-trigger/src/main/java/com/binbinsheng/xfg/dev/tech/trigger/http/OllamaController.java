@@ -20,7 +20,7 @@ public class OllamaController implements IAiService{
 
 
     /**
-     * http://localhost:8090/api/v1/ollama/generate?model=deepseek-r1:1.5b&message=1+1
+//     * http://localhost:8090/api/v1/ollama/generate?model=deepseek-r1:1.5b&message=1+1
      */
     @RequestMapping(value = "generate", method = RequestMethod.GET)
     @Override
