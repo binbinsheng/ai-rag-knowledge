@@ -46,6 +46,21 @@ public class RAGTest {
         List<Document> documents = reader.get();
         List<Document> documentSplitterList = tokenTextSplitter.apply(documents);
 
+        /**
+         *
+         * [
+         *   Document{
+         *     content="王大瓜出生于1980年，毕业于...",
+         *     metadata={"knowledge": "知识库名称"}
+         *   },
+         *   Document{
+         *     content="他曾在多个领域发表过研究成果...",
+         *     metadata={"knowledge": "知识库名称"}
+         *   },
+         *   ...
+         * ]
+         *
+         */
         documents.forEach(doc -> doc.getMetadata().put("knowledge", "知识库名称"));
         documentSplitterList.forEach(doc -> doc.getMetadata().put("knowledge", "知识库名称"));
 
