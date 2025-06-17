@@ -11,4 +11,7 @@ public interface IRAGService {
 
     //上次知识库
     Response<String> upload(String ragTag, List<MultipartFile> files);
+
+    //拉去git仓库文件并解析到向量数据库preSql中
+    Response<String> analyzeGitRepository(String repoUrl, String userName, String token) throws Exception;
 }
